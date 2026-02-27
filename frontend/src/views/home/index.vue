@@ -284,7 +284,7 @@ onUnmounted(() => {
 <style scoped lang="scss">
 .home-container {
   padding: 16px;
-  background-color: #f0f2f5;
+  background-color: transparent;
   min-height: calc(100vh - 50px);
 
   // 欢迎卡片
@@ -306,20 +306,20 @@ onUnmounted(() => {
           margin: 0 0 8px 0;
           font-size: 24px;
           font-weight: 500;
-          color: #303133;
+          color: var(--el-text-color-primary);
         }
 
         .welcome-desc {
           margin: 0;
           font-size: 14px;
-          color: #909399;
+          color: var(--el-text-color-secondary);
         }
       }
 
       .welcome-right {
         .welcome-time {
           font-size: 14px;
-          color: #606266;
+          color: var(--el-text-color-regular);
         }
       }
     }
@@ -379,14 +379,14 @@ onUnmounted(() => {
           .stat-value {
             font-size: 28px;
             font-weight: 600;
-            color: #303133;
+            color: var(--el-text-color-primary);
             line-height: 1;
             margin-bottom: 8px;
           }
 
           .stat-label {
             font-size: 14px;
-            color: #909399;
+            color: var(--el-text-color-secondary);
           }
         }
       }
@@ -429,7 +429,7 @@ onUnmounted(() => {
         display: flex;
         align-items: flex-start;
         padding: 12px 0;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid var(--el-border-color-lighter);
 
         &:last-child {
           border-bottom: none;
@@ -446,13 +446,13 @@ onUnmounted(() => {
 
           .notice-title {
             font-size: 14px;
-            color: #303133;
+            color: var(--el-text-color-primary);
             margin-bottom: 4px;
           }
 
           .notice-time {
             font-size: 12px;
-            color: #909399;
+            color: var(--el-text-color-secondary);
           }
         }
       }
@@ -464,7 +464,7 @@ onUnmounted(() => {
         display: flex;
         align-items: center;
         padding: 12px 0;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid var(--el-border-color-lighter);
 
         &:last-child {
           border-bottom: none;
@@ -473,11 +473,11 @@ onUnmounted(() => {
         span {
           margin-left: 12px;
           font-size: 14px;
-          color: #303133;
+          color: var(--el-text-color-primary);
 
           &.todo-done {
             text-decoration: line-through;
-            color: #909399;
+            color: var(--el-text-color-secondary);
           }
         }
       }

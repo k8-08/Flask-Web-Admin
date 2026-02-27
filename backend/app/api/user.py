@@ -155,3 +155,60 @@ def reset_password(user_id):
     user.updated_by = g.user_id
     db.session.commit()
     return success(msg='密码重置成功')
+@user_bp.put('/api/v1/system/user/profile')
+@login_required
+def update_profile():
+    """更新个人信息"""
+    user = User.query.filter_by(id=g.user_id, enabled_flag=True).first()
+    if not user:
+        return fail('用户不存在', 404)
+
+    data = request.get_json() or {}
+    if 'nickname' in data:
+        user.nickname = data['nickname']
+    if 'email' in data:
+        user.email = data['email']
+    if 'phone' in data:
+        user.phone = data['phone']
+
+    user.updated_by = g.user_id
+    db.session.commit()
+    return success(user.to_dict(), '个人信息更新成功')
+
+@user_bp.put('/api/v1/system/user/avatar')
+@login_required
+def update_avatar():
+    """更新个人头像"""
+    user = User.query.filter_by(id=g.user_id, enabled_flag=True).first()
+    if not user:
+        return fail('用户不存在', 404)
+
+    data = request.get_json() or {}
+    avatar_url = data.get('avatar', '').strip()
+    if not avatar_url:
+        return fail('头像地址不能为空')
+
+    user.avatar = avatar_url
+    user.updated_by = g.user_id
+    db.session.commit()
+    return success({'avatar': user.avatar}, '头像更新成功')
+
+@user_bp.put('/api/v1/system/user/password')
+@login_required
+def change_password():
+    """个人修改自己密码"""
+    user = User.query.filter_by(id=g.user_id, enabled_flag=True).first()
+    if not user:
+        return fail('用户不存在', 404)
+
+    data = request.get_json() or {}
+    old_pwd = data.get('old_password', '')
+    new_pwd = data.get('new_password', '')
+
+    if not bcrypt.checkpw(old_pwd.encode('utf-8'), user.password.encode('utf-8')):
+        return fail('旧密码错误')
+
+    user.password = hash_password(new_pwd)
+    user.updated_by = g.user_id
+    db.session.commit()
+    return success(msg='密码修改成功')

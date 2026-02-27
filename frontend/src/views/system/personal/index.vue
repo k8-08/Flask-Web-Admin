@@ -280,6 +280,10 @@ const getUserInfo = async () => {
     data.avatar = `${import.meta.env.VITE_API_BASE_URL}${data.avatar}`;
   }
   
+  if (!data.avatar) {
+    data.avatar = new URL('../../../assets/avatar-cat.jpg', import.meta.url).href;
+  }
+  
   state.userInfoForm = data
 }
 
