@@ -39,8 +39,8 @@
 
     <div class="login-footer">
       <div class="login-footer__content">
-        <span style="color: #fff">FlaskapiWebAdmin</span> |
-        <a style="color: #fff" href="https://github.com/k8-08/Flaskapiwebadmin" class="slide" target="_blank">© 2026 FlaskapiWebAdmin</a>
+        <span style="color: #fff">FlaskWebAdmin</span> |
+        <a style="color: #fff" href="https://github.com/k8-08/Flask-Web-Admin" class="slide" target="_blank">© 2026 FlaskWebAdmin</a>
       </div>
     </div>
   </div>

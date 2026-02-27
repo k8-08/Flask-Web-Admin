@@ -91,7 +91,7 @@
                         :key="tag"
                         size="default"
                         type="success"
-                        style="{margin-left: 0.25rem;margin-right: 0.25rem;}"
+                        :style="{marginLeft: '0.25rem', marginRight: '0.25rem'}"
                         :disable-transitions="false"
                     >{{ tag }}
                     </el-tag>
@@ -168,7 +168,7 @@
                         size="default"
                         type="success"
                         closable
-                        style="{margin-left: 0.25rem;margin-right: 0.25rem;}"
+                        :style="{marginLeft: '0.25rem', marginRight: '0.25rem'}"
                         :disable-transitions="false"
                         @close="removeTag(tag)"
                     >{{ tag }}
@@ -241,7 +241,7 @@ const {userInfos} = storeToRefs(userStores);
 
 // 定义变量内容
 const state = reactive({
-  newsInfoList: [],
+  newsInfoList: [] as { link: string; title: string }[],
   recommendList: [],
   userInfoForm: {
     id: null,
@@ -312,7 +312,7 @@ const showEditTag = () => {
   })
 }
 
-const removeTag = (tag) => {
+const removeTag = (tag: string) => {
   state.userInfoForm.tags.splice(state.userInfoForm.tags.indexOf(tag), 1)
 }
 

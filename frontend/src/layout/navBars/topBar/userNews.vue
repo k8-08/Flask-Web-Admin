@@ -25,15 +25,13 @@
 
 <script setup lang="ts" name="layoutBreadcrumbUserNews">
 import {reactive} from 'vue';
-import WeixinImg from '/@/assets/weixin.png'
-
 // 定义变量内容
 const state = reactive({
   newsList: [
     {
-      label: '加我微信进交流群（请备注下谢谢^_^）',
+      label: '欢迎使用后台管理系统',
       value: '',
-      img: WeixinImg,
+      img: '', // Removed WeixinImg
       time: '2026-01-16',
     }
   ],

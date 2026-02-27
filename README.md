@@ -149,14 +149,29 @@ frontend/
 
 ## 📸 系统截图
 
-### 登录页
-![登录页](static/img/func.png)
-
 ### 首页
 ![首页](static/img/index.png)
 
 ### 个人中心
-![个人中心1](static/img/ge.png)
+![个人中心](static/img/ge.png)
+
+### 登录页
+![登录页](static/img/func.png)
+
+### 参数配置
+![参数配置](static/img/csssa.png)
+
+### 日志管理
+![日志管理](static/img/csssb.png)
+
+### 部门管理
+![部门管理](static/img/gen.png)
+
+### 菜单管理
+![菜单管理](static/img/qy.png)
+
+### 角色管理
+![角色管理](static/img/report.png)
 
 *(其余截图可按需更新)*
 

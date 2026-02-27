@@ -2,8 +2,7 @@ import { defineStore } from 'pinia';
 import { Session } from '/@/utils/storage';
 import { useUserApi } from "/@/api/v1/system/user";
 
-// 默认头像（猫图）
-const DEFAULT_AVATAR = new URL('../assets/avatar-cat.jpg', import.meta.url).href;
+
 
 /**
  * 用户信息
@@ -37,10 +36,7 @@ export const useUserStore = defineStore('userInfo', {
 				if (avatarUrl && avatarUrl.startsWith('/static/')) {
 					avatarUrl = `${import.meta.env.VITE_API_BASE_URL}${avatarUrl}`;
 				}
-				// 没有头像时使用默认猫图
-				if (!avatarUrl) {
-					avatarUrl = DEFAULT_AVATAR;
-				}
+
 
 				// 映射后端返回的数据到前端格式
 				this.userInfos = {
