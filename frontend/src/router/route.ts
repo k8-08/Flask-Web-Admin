@@ -1,4 +1,4 @@
-import {RouteRecordRaw} from 'vue-router';
+import { RouteRecordRaw } from 'vue-router';
 
 /**
  * 建议：路由 path 路径与文件夹名称相同，找文件可浏览器地址找，方便定位文件位置
@@ -89,7 +89,7 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 							isAffix: false,
 							isIframe: false,
 							roles: ['admin'],
-							icon: 'iconfont icon-caidan',
+							icon: 'ele-Menu',
 						},
 					},
 					{
@@ -119,7 +119,7 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 							isAffix: false,
 							isIframe: false,
 							roles: ['admin'],
-							icon: 'iconfont icon-icon-',
+							icon: 'ele-User',
 						},
 					},
 					{
@@ -135,6 +135,21 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 							isIframe: false,
 							roles: ['admin'],
 							icon: 'ele-OfficeBuilding',
+						},
+					},
+					{
+						path: '/system/personal',
+						name: 'systemPersonal',
+						component: () => import('/src/views/system/personal/index.vue'),
+						meta: {
+							title: '个人中心',
+							isLink: '',
+							isHide: true,
+							isKeepAlive: true,
+							isAffix: false,
+							isIframe: false,
+							roles: ['admin', 'common'],
+							icon: 'iconfont icon-icon-',
 						},
 					},
 					{

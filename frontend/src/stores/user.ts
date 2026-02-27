@@ -1,6 +1,9 @@
-import {defineStore} from 'pinia';
-import {Session} from '/@/utils/storage';
-import {useUserApi} from "/@/api/v1/system/user";
+import { defineStore } from 'pinia';
+import { Session } from '/@/utils/storage';
+import { useUserApi } from "/@/api/v1/system/user";
+
+// 默认头像（猫图）
+const DEFAULT_AVATAR = new URL('../assets/avatar-cat.jpg', import.meta.url).href;
 
 /**
  * 用户信息
@@ -28,13 +31,17 @@ export const useUserStore = defineStore('userInfo', {
 				this.userInfos = Session.get('userInfo');
 			} else {
 				const apiUserInfo = await this.getApiUserInfo();
-				
+
 				// 处理头像URL：如果是相对路径，添加完整的基础URL
 				let avatarUrl = apiUserInfo.avatar || '';
 				if (avatarUrl && avatarUrl.startsWith('/static/')) {
 					avatarUrl = `${import.meta.env.VITE_API_BASE_URL}${avatarUrl}`;
 				}
-				
+				// 没有头像时使用默认猫图
+				if (!avatarUrl) {
+					avatarUrl = DEFAULT_AVATAR;
+				}
+
 				// 映射后端返回的数据到前端格式
 				this.userInfos = {
 					id: apiUserInfo.id?.toString() || null,
@@ -52,7 +59,7 @@ export const useUserStore = defineStore('userInfo', {
 			}
 		},
 		async getApiUserInfo() {
-			let {data} = await useUserApi().getUserInfoByToken()
+			let { data } = await useUserApi().getUserInfoByToken()
 			return data
 		},
 		async updateUserInfo(data: UserInfos) {

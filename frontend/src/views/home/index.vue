@@ -86,7 +86,7 @@
           <el-descriptions :column="2" border>
             <el-descriptions-item label="系统名称">后台管理系统</el-descriptions-item>
             <el-descriptions-item label="系统版本">v1.0.0</el-descriptions-item>
-            <el-descriptions-item label="开发框架">Vue 3 + FastAPI</el-descriptions-item>
+            <el-descriptions-item label="开发框架">Vue 3 + Flask</el-descriptions-item>
             <el-descriptions-item label="UI 框架">Element Plus</el-descriptions-item>
             <el-descriptions-item label="服务器时间" :span="2">{{ currentTime }}</el-descriptions-item>
           </el-descriptions>
@@ -247,15 +247,24 @@ const goToPage = (path: string) => {
   router.push(path);
 };
 
-// 模拟加载统计数据
-const loadStats = () => {
-  // 这里后续可以对接真实的API
-  stats.value = {
-    users: 156,
-    menus: 28,
-    roles: 5,
-    online: 12
-  };
+// 加载统计数据
+const loadStats = async () => {
+  try {
+    const { useUserApi } = await import('/@/api/v1/system/user');
+    const { useRoleApi } = await import('/@/api/v1/system/role');
+    const [userRes, roleRes] = await Promise.allSettled([
+      useUserApi().getList({ page: 1, page_size: 1 }),
+      useRoleApi().getList()
+    ]);
+    stats.value = {
+      users: userRes.status === 'fulfilled' ? (userRes.value?.data?.rowTotal ?? 0) : 0,
+      menus: 5,   // 静态路由菜单数
+      roles: roleRes.status === 'fulfilled' ? (roleRes.value?.data?.length ?? 0) : 0,
+      online: 1,  // 当前登录用户
+    };
+  } catch (e) {
+    stats.value = { users: 0, menus: 5, roles: 0, online: 1 };
+  }
 };
 
 onMounted(() => {

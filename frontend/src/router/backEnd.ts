@@ -1,15 +1,15 @@
-import {RouteRecordRaw} from 'vue-router';
-import {useUserStore} from '/@/stores/user';
-import {useRequestOldRoutes} from '/@/stores/requestOldRoutes';
-import {Session} from '/@/utils/storage';
-import {NextLoading} from '/@/utils/loading';
-import {dynamicRoutes, notFoundAndNoPower} from '/@/router/route';
-import {formatFlatteningRoutes, formatTwoStageRoutes, router} from '/@/router';
-import {useRoutesList} from '/@/stores/routesList';
-import {useTagsViewRoutes} from '/@/stores/tagsViewRoutes';
-import {useUserApi} from '/@/api/v1/system/user';
-import {useLookupStore} from "/@/stores/lookup";
-import {useMenuInfo} from "/@/stores/menu";
+import { RouteRecordRaw } from 'vue-router';
+import { useUserStore } from '/@/stores/user';
+import { useRequestOldRoutes } from '/@/stores/requestOldRoutes';
+import { Session } from '/@/utils/storage';
+import { NextLoading } from '/@/utils/loading';
+import { dynamicRoutes, notFoundAndNoPower } from '/@/router/route';
+import { formatFlatteningRoutes, formatTwoStageRoutes, router } from '/@/router';
+import { useRoutesList } from '/@/stores/routesList';
+import { useTagsViewRoutes } from '/@/stores/tagsViewRoutes';
+import { useUserApi } from '/@/api/v1/system/user';
+import { useLookupStore } from "/@/stores/lookup";
+import { useMenuInfo } from "/@/stores/menu";
 
 
 /**
@@ -19,7 +19,7 @@ import {useMenuInfo} from "/@/stores/menu";
  */
 const layoutModules: any = import.meta.glob('../layout/routerView/*.{vue,tsx}');
 const viewsModules: any = import.meta.glob('../views/**/*.{vue,tsx}');
-const dynamicViewsModules = Object.assign({}, {...layoutModules}, {...viewsModules});
+const dynamicViewsModules = Object.assign({}, { ...layoutModules }, { ...viewsModules });
 
 /**
  * 后端控制路由：初始化方法，防止刷新时路由丢失
@@ -40,18 +40,19 @@ export async function initBackEndControlRoutes() {
 	await useLookupStore().setLookup();
 	// 获取路由菜单数据
 	const menuData = await useMenuInfo().getMenuData();
-	// 无登录权限时，添加判断
-	// if (res.data.length <= 0) return Promise.resolve(true);
 	// 存储接口原始路由（未处理component），根据需求选择使用
-	await useRequestOldRoutes().setRequestOldRoutes(JSON.parse(JSON.stringify(menuData)));
-	// 处理路由（component），替换 dynamicRoutes（/@/router/route）第一个顶级 children 的路由
-	dynamicRoutes[0].children = await backEndComponent(menuData);
+	await useRequestOldRoutes().setRequestOldRoutes(JSON.parse(JSON.stringify(menuData || [])));
+	// 仅当后端返回了菜单数据时才覆盖静态路由，否则使用 route.ts 中定义的静态路由
+	if (menuData && menuData.length > 0) {
+		dynamicRoutes[0].children = await backEndComponent(menuData);
+	}
 	// 添加动态路由
 	await setAddRoute();
 	// 设置路由到 pinia routesList 中（已处理成多级嵌套路由）及缓存多级嵌套数组处理后的一维数组
 	await setFilterMenuAndCacheTagsViewRoutes();
 
 }
+
 
 /**
  * 设置路由到 pinia routesList 中（已处理成多级嵌套路由）及缓存多级嵌套数组处理后的一维数组
@@ -105,7 +106,7 @@ export async function setAddRoute() {
  * @returns 返回后端路由菜单数据
  */
 export async function getBackEndControlRoutes() {
-	let {data} = await useUserApi().getMenuByToken()
+	let { data } = await useUserApi().getMenuByToken()
 	return data
 }
 

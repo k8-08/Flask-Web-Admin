@@ -3,7 +3,7 @@
     <div class="login-left">
       <!-- Logo -->
       <div class="login-left-logo">
-        <img :src="logos.white" class="login-left-logo-img" alt="Logo"/>
+        <span class="login-left-logo-text">{{ getThemeConfig.globalTitle }}</span>
       </div>
       <!--      <div class="login-left-img">-->
       <!--        <img :src="loginMain"/>-->
@@ -39,8 +39,8 @@
 
     <div class="login-footer">
       <div class="login-footer__content">
-        <span style="color: #fff">fastapiwebadmin</span> |
-        <a style="color: #fff" href="https://beian.miit.gov.cn/" class="slide" target="_blank">贵ICP备202698015号</a>
+        <span style="color: #fff">FlaskapiWebAdmin</span> |
+        <a style="color: #fff" href="https://github.com/k8-08/Flaskapiwebadmin" class="slide" target="_blank">© 2026 FlaskapiWebAdmin</a>
       </div>
     </div>
   </div>
@@ -105,6 +105,14 @@ onMounted(() => {
         max-width: 120px;
         max-height: 120px;
         object-fit: contain;
+      }
+
+      .login-left-logo-text {
+        font-size: 22px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.4);
       }
     }
 

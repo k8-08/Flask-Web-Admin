@@ -1,10 +1,9 @@
 <template>
   <div class="layout-logo" v-if="setShowLogo" @click="onThemeConfigChange">
-    <img :src="getLogo" class="layout-logo-medium-img"/>
-    <!--    <span>{{ themeConfig.globalTitle }}</span>-->
+    <span class="layout-logo-text">{{ themeConfig.globalTitle }}</span>
   </div>
   <div class="layout-logo-size" v-else @click="onThemeConfigChange">
-    <img :src="getLogo" class="layout-logo-size-img"/>
+    <span class="layout-logo-mini">F</span>
   </div>
 </template>
 
@@ -24,20 +23,7 @@ const setShowLogo = computed(() => {
   return !isCollapse || layout === 'classic' || document.body.clientWidth < 1000;
 });
 // 获取logo
-const getLogo = computed(() => {
-  let {isCollapse, layout} = themeConfig.value;
-  if (isCollapse) {
-    if (document.body.clientWidth < 1000) {
-      return logos.white
-    }
-    return logos.mini
-  } else {
-    if (layout === "defaults") return logos.white
-    if (layout === "transverse") return logos.main
-    if (layout === "columns") return logos.white
-    if (layout === "classic") return logos.main
-  }
-});
+// const getLogo = computed(() => { ... }); // 已改为文字显示，不再需要图片
 
 // logo 点击实现菜单展开/收起
 const onThemeConfigChange = () => {
@@ -75,6 +61,14 @@ const onThemeConfigChange = () => {
     max-height: 40px;
     margin-right: 5px;
     object-fit: contain;
+  }
+
+  .layout-logo-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    white-space: nowrap;
   }
 }
 

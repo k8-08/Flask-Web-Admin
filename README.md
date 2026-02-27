@@ -441,8 +441,8 @@ frontend/src/
 #### 1. 克隆项目
 
 ```bash
-git clone https://github.com/rebort-hub/fastapiwebadmin.git
-cd fastapiwebadmin
+git clone https://github.com/k8-08/Flaskapiwebadmin.git
+cd Flaskapiwebadmin
 ```
 
 #### 2. 配置环境变量
@@ -665,10 +665,6 @@ python init_log_permissions.py
 
 ### 路由菜单管理
 ![路由菜单管理](static/img/report.png)
-
-### 接口管理
-![接口管理1](static/img/case.png)
-![接口管理2](static/img/cass.png)
 
 ### 个人中心
 ![个人中心1](static/img/ge.png)

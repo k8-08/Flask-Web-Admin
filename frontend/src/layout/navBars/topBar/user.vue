@@ -271,11 +271,11 @@ const onSearchClick = () => {
 
 // git仓库
 const onGithubClick = () => {
-  window.open('https://github.com/rebort-hub');
+  window.open('https://github.com/k8-08/Flaskapiwebadmin');
 }
 // doc文档
 const onDocClick = () => {
-  window.open('https://github.com/rebort-hub');
+  window.open('https://github.com/k8-08/Flaskapiwebadmin');
 }
 // 个人中心
 const onUserCenterClick = () => {
