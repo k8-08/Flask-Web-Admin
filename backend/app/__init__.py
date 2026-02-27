@@ -46,15 +46,55 @@ def create_app():
         return _jsonify({'code': 200, 'msg': 'ok', 'data': []}), 200
 
     # 菜单管理 stub（前端 /system/menu 页面渲染用）
+    MOCK_MENUS = [
+        {
+            "id": 1, "parent_id": 0, "menu_name": "首页", "path": "/home",
+            "component": "/src/views/home/index.vue", "perms": "", "component_name": "home",
+            "order_num": 1, "menu_type": "C", "icon": "iconfont icon-shouye", "status": 1
+        },
+        {
+            "id": 2, "parent_id": 0, "menu_name": "系统设置", "path": "/system",
+            "component": "/src/layout/routerView/parent.vue", "perms": "", "component_name": "system",
+            "order_num": 2, "menu_type": "M", "icon": "iconfont icon-xitongshezhi", "status": 1
+        },
+        {
+            "id": 3, "parent_id": 2, "menu_name": "菜单管理", "path": "/system/menu",
+            "component": "/src/views/system/menu/index.vue", "perms": "system:menu:list", "component_name": "systemMenu",
+            "order_num": 1, "menu_type": "C", "icon": "ele-Menu", "status": 1
+        },
+        {
+            "id": 4, "parent_id": 2, "menu_name": "角色管理", "path": "/system/role",
+            "component": "/src/views/system/role/index.vue", "perms": "system:role:list", "component_name": "systemRole",
+            "order_num": 2, "menu_type": "C", "icon": "ele-ColdDrink", "status": 1
+        },
+        {
+            "id": 5, "parent_id": 2, "menu_name": "用户管理", "path": "/system/user",
+            "component": "/src/views/system/user/index.vue", "perms": "system:user:list", "component_name": "systemUser",
+            "order_num": 3, "menu_type": "C", "icon": "ele-User", "status": 1
+        },
+        {
+            "id": 6, "parent_id": 2, "menu_name": "部门管理", "path": "/system/dept",
+            "component": "/src/views/system/dept/index.vue", "perms": "system:dept:list", "component_name": "systemDept",
+            "order_num": 4, "menu_type": "C", "icon": "ele-OfficeBuilding", "status": 1
+        }
+    ]
+
     @app.get('/api/v1/system/menu')
     @login_required
     def menu_list():
-        return _jsonify({'code': 200, 'msg': 'ok', 'data': [], 'total': 0}), 200
+        return _jsonify({'code': 200, 'msg': 'ok', 'data': MOCK_MENUS, 'total': len(MOCK_MENUS)}), 200
 
     @app.get('/api/v1/system/menu/tree')
     @login_required
     def menu_tree():
-        return _jsonify({'code': 200, 'msg': 'ok', 'data': []}), 200
+        # 构建树形
+        tree = []
+        for menu in MOCK_MENUS:
+            if menu['parent_id'] == 0:
+                menu_copy = dict(menu)
+                menu_copy['children'] = [dict(m) for m in MOCK_MENUS if m['parent_id'] == menu['id']]
+                tree.append(menu_copy)
+        return _jsonify({'code': 200, 'msg': 'ok', 'data': tree, 'total': len(tree)}), 200
 
     @app.post('/api/v1/system/menu')
     @login_required

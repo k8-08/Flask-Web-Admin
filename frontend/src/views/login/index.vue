@@ -86,13 +86,14 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .login-container {
+  flex-direction: row-reverse;
+  justify-content: space-between;
   // 背景图通过 :style 绑定动态设置，便于统一管理和替换
 
   .login-left {
     flex: 1;
     position: relative;
-    //background-color: rgba(211, 239, 255, 1);
-    margin-right: 100px;
+    margin-left: 100px;
 
     .login-left-logo {
       position: absolute;
