@@ -143,7 +143,8 @@ const getList = async () => {
     state.allMenuList = res.data
     
     // 深拷贝数据，避免引用问题
-    const allMenuData = JSON.parse(JSON.stringify(res.data))
+    const safeData = res.data || []
+    const allMenuData = JSON.parse(JSON.stringify(safeData))
     
     let parent_menu: any = []
     allMenuData.forEach((menu: any) => {

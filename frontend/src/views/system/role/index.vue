@@ -97,8 +97,8 @@ const getList = () => {
   tableRef.value.openLoading()
   useRoleApi().getList(state.listQuery)
       .then(res => {
-        state.listData = res.data.rows
-        state.total = res.data.rowTotal
+        state.listData = res.data?.rows || res.data || [];
+        state.total = res.data?.rowTotal || res.data?.length || 0;
       })
       .catch((error) => {
         ElMessage.error(error.message || '获取角色列表失败');
