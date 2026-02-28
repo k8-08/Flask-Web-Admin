@@ -4,7 +4,7 @@
       title="修改密码"
       v-model="state.isShowDialog"
       width="40%">
-    <el-form ref="formRef" :model="state.form" :rules="state.rules" label-width="80px">
+    <el-form ref="formRef" :model="state.form" label-width="80px">
       <el-row :gutter="35">
         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="mb20">
           <el-form-item label="旧密码"

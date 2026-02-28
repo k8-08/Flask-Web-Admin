@@ -171,11 +171,11 @@ const signInSuccess = (isNoPower: boolean) => {
     let currentTimeInfo = currentTime.value;
     // 登录成功，跳到转首页
     // 如果是复制粘贴的路径，非首页/登录页，那么登录成功后重定向到对应的路径中
-    const params = route.query!.params || {}
+    const params = (route.query?.params as string) || '';
     if (route.query?.redirect) {
       router.push({
-        path: route.query?.redirect,
-        query: Object.keys(params).length > 0 ? JSON.parse(params) : '',
+        path: route.query?.redirect as string,
+        query: params ? JSON.parse(params) : {},
       });
     } else {
       router.push('/home');

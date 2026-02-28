@@ -1,0 +1,64 @@
+﻿node.exe : [33mThe CJS
+ build of Vite's Node A
+PI is deprecated. See h
+ttps://vite.dev/guide/t
+roubleshooting.html#vit
+e-cjs-node-api-deprecat
+ed for more details.[3
+9m
+所在位置 D:\nodejs\npx.ps1:
+29 字符: 3
++   & $NODE_EXE $NPX_CL
+I_JS $args
++   ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecified
+    : ([33mThe CJS bu.
+    ..e details.[39m:S
+    tring) [], RemoteEx
+    ception
+    + FullyQualifiedErr
+    orId : NativeComman
+    dError
+ 
+[31mfailed to load con
+fig from D:\Flaskapiweb
+admin\frontend\vite.con
+fig.ts[39m
+[31merror during build
+:
+SyntaxError: "undefined
+" is not valid JSON
+    at JSON.parse (<ano
+nymous>)
+    at D:\Flaskapiwebad
+min\frontend\vite.confi
+g.ts:122:18
+    at loadConfigFromFi
+le (file:///D:/Flaskapi
+webadmin/frontend/node_
+modules/vite/dist/node/
+chunks/dep-BK3b2jBa.js:
+66822:62)
+    at process.processT
+icksAndRejections (node
+:internal/process/task_
+queues:105:5)
+    at async resolveCon
+fig (file:///D:/Flaskap
+iwebadmin/frontend/node
+_modules/vite/dist/node
+/chunks/dep-BK3b2jBa.js
+:66416:24)
+    at async build (fil
+e:///D:/Flaskapiwebadmi
+n/frontend/node_modules
+/vite/dist/node/chunks/
+dep-BK3b2jBa.js:65503:1
+8)
+    at async CAC.<anony
+mous> (file:///D:/Flask
+apiwebadmin/frontend/no
+de_modules/vite/dist/no
+de/cli.js:829:5)[39m

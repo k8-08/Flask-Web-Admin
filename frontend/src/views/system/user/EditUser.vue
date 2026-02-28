@@ -115,7 +115,7 @@ const emit = defineEmits(["getList"])
 
 const props = defineProps({
   roleList: {
-    type: Array,
+    type: Array as () => any[],
     default: () => []
   }
 })
@@ -187,7 +187,7 @@ const saveOrUpdate = () => {
   userFormRef.value.validate((valid: any) => {
     if (valid) {
       // 处理空字符串字段，转为null
-      const formData = { ...state.form };
+      const formData: any = { ...state.form };
       if (formData.email === '') formData.email = null;
       if (formData.phone === '') formData.phone = null;
       if (formData.remark === '') formData.remark = null;

@@ -10,19 +10,19 @@
     <template v-for="val in menuLists">
       <el-sub-menu :index="val.path" v-if="val.children && val.children.length > 0" :key="val.path">
         <template #title>
-          <SvgIcon :name="val.meta.icon"/>
-          <span>{{ val.meta.title }}</span>
+          <SvgIcon :name="val.meta?.icon"/>
+          <span>{{ val.meta?.title }}</span>
         </template>
         <SubItem :chil="val.children"/>
       </el-sub-menu>
       <template v-else>
         <el-menu-item :index="val.path" :key="val.path">
-          <SvgIcon :name="val.meta.icon"/>
-          <template #title v-if="!val.meta.isLink || (val.meta.isLink && val.meta.isIframe)">
-            <span>{{ val.meta.title }}</span>
+          <SvgIcon :name="val.meta?.icon"/>
+          <template #title v-if="!val.meta?.isLink || (val.meta?.isLink && val.meta?.isIframe)">
+            <span>{{ val.meta?.title }}</span>
           </template>
           <template #title v-else>
-            <a class="w100" @click.prevent="onALinkClick(val)">{{ val.meta.title }}</a>
+            <a class="w100" @click.prevent="onALinkClick(val as any)">{{ val.meta?.title }}</a>
           </template>
         </el-menu-item>
       </template>
@@ -70,8 +70,8 @@ const getThemeConfig = computed(() => {
 const setParentHighlight = (currentRoute: RouteToFrom) => {
   const {path, meta} = currentRoute;
   const pathSplit = meta?.isDynamic ? meta.isDynamicPath?.split('/') : path?.split('/');
-  if (pathSplit.length >= 4 && meta?.isHide) return pathSplit.splice(0, 3).join('/');
-  else return path;
+  if (pathSplit && pathSplit.length >= 4 && meta?.isHide) return pathSplit.splice(0, 3).join('/');
+  else return path || '';
 };
 // 打开外部链接
 const onALinkClick = (val: RouteItem) => {

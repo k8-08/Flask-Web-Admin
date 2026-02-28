@@ -31,7 +31,7 @@ const storesTagsViewRoutes = useTagsViewRoutes();
 const {routesList} = storeToRefs(stores);
 const {isTagsViewCurrenFull} = storeToRefs(storesTagsViewRoutes);
 const state = reactive({
-  menuList: [],
+  menuList: [] as RouteItems,
   clientWidth: 0,
 });
 
@@ -47,7 +47,7 @@ const setCollapseStyle = computed(() => {
       const asideEle = document.querySelector('.layout-container');
       const modeDivs = document.createElement('div');
       modeDivs.setAttribute('class', 'layout-aside-mobile-mode');
-      asideEle.appendChild(modeDivs);
+      asideEle?.appendChild(modeDivs);
       modeDivs.addEventListener('click', closeLayoutAsideMobileMode);
       return [asideBrColor, 'layout-aside-mobile', 'layout-aside-mobile-open'];
     } else {
@@ -99,11 +99,11 @@ const filterRoutesFun = <T extends RouteItem>(arr: T[]): T[] => {
       });
 };
 // 设置菜单导航是否固定（移动端）
-const initMenuFixed = (clientWidth) => {
+const initMenuFixed = (clientWidth: number) => {
   state.clientWidth = clientWidth;
 };
 // 鼠标移入、移出
-const onAsideEnterLeave = (bool) => {
+const onAsideEnterLeave = (bool: boolean) => {
   let {layout} = themeConfig.value;
   if (layout !== 'columns') return false;
   if (!bool) mittBus.emit('restoreDefault');

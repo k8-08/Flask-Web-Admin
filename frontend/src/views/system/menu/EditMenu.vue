@@ -139,7 +139,7 @@
 </template>
 
 <script lang="ts" setup name="SaveOrUpdateMenu">
-import {onMounted, reactive, ref} from 'vue';
+import {onMounted, reactive, ref, PropType} from 'vue';
 import IconSelector from '/@/components/iconSelector/index.vue';
 import {useMenuApi} from "/@/api/v1/system/menu";
 import {ElMessage} from "element-plus";
@@ -147,10 +147,10 @@ import {ElMessage} from "element-plus";
 const emit = defineEmits(['getList'])
 const props = defineProps({
   allMenuList: {
-    type: Array,
+    type: Array as PropType<any[]>,
   },
   menuList: {
-    type: Array,
+    type: Array as PropType<any[]>,
   }
 })
 
@@ -271,7 +271,7 @@ const openDialog = (editType: string, row: any) => {
     };
     
     // 清理无效的perms值
-    if (state.form.perms === 0 || state.form.perms === '0' || state.form.perms === 'False') {
+    if (state.form.perms === '0' || state.form.perms === 'False') {
       state.form.perms = '';
     }
   } else {
@@ -294,10 +294,10 @@ const saveOrUpdate = () => {
     
     // 处理空字符串字段，转为null
     const formData = { ...state.form };
-    if (formData.remark === '') formData.remark = null;
-    if (formData.query === '') formData.query = null;
-    if (formData.perms === '') formData.perms = null;
-    if (formData.icon === '') formData.icon = null;
+    if (formData.remark === '') (formData as any).remark = null;
+    if (formData.query === '') (formData as any).query = null;
+    if (formData.perms === '') (formData as any).perms = null;
+    if (formData.icon === '') (formData as any).icon = null;
     
     useMenuApi().saveOrUpdate(formData)
         .then(() => {

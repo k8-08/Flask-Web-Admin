@@ -2,12 +2,6 @@
 import {ElCard} from "element-plus"
 defineOptions({name: "ZeroCard"})
 
-defineSlots<{
-  default?: any
-  header?: any
-  footer?: any
-}>()
-
 defineProps({
   borderRadius: {
     type: String,
@@ -16,16 +10,15 @@ defineProps({
   showTip: {
     type: Boolean,
     default: false
-  },
+  }
 })
-
 
 </script>
 
 <template>
   <el-card class="zero-card-class" v-bind="$attrs" :class="[showTip? 'zero-card-tip' : '']">
-    <template v-for="(item, key) in $slots" :key="key" #[key]="slotProps">
-      <slot :name="key" v-bind="slotProps"></slot>
+    <template v-for="key in Object.keys($slots)" :key="key" #[key]="slotProps">
+      <slot :name="key" v-bind="slotProps || {}"></slot>
     </template>
   </el-card>
 </template>

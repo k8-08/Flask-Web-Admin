@@ -234,8 +234,8 @@ const state = reactive<StateRow>({
   selectedRows: []
 });
 
-const getMethodTagType = (method: string) => {
-  const typeMap: Record<string, string> = {
+const getMethodTagType = (method: string): 'primary' | 'success' | 'warning' | 'info' | 'danger' => {
+  const typeMap: Record<string, 'primary' | 'success' | 'warning' | 'info' | 'danger'> = {
     'GET': 'info',
     'POST': 'success',
     'PUT': 'warning',
@@ -376,7 +376,7 @@ const clearLogs = () => {
     inputErrorMessage: '请输入有效的天数',
     inputValue: '30'
   })
-    .then(({ value }) => {
+    .then(({ value }: any) => {
       const days = parseInt(value) || 30;
       useLogApi().clearOperationLogs(days)
         .then((res) => {

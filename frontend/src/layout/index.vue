@@ -10,7 +10,7 @@ import {Local} from '/@/utils/storage';
 import mittBus from '/@/utils/mitt';
 
 // 引入组件
-const layouts = {
+const layouts: Record<string, any> = {
   defaults: defineAsyncComponent(() => import('/@/layout/main/defaults.vue')),
   classic: defineAsyncComponent(() => import('/@/layout/main/classic.vue')),
   transverse: defineAsyncComponent(() => import('/@/layout/main/transverse.vue')),

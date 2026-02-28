@@ -28,6 +28,13 @@ declare interface Window {
 	nextLoading: boolean;
 }
 
+// 声明通用API返回数据格式
+declare interface IApiResponseData<T = any> {
+	code: number;
+	data: T;
+	message: string;
+}
+
 // 声明路由当前项类型
 declare type RouteItem<T = any> = {
 	path: string;
@@ -58,6 +65,7 @@ declare type RouteItem<T = any> = {
 	transUrl?: string;
 	title?: string;
 	id?: string | number;
+	fullPath?: string;
 };
 
 // 声明路由 to from

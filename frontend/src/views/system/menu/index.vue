@@ -112,8 +112,8 @@ const state = reactive({
     },
   ],
   // list
-  menuList: [],
-  allMenuList: null,
+  menuList: [] as any[],
+  allMenuList: [] as any[],
   listQuery: {
     page: 1,
     pageSize: 200,
@@ -171,11 +171,11 @@ const getList = async () => {
 //   addMenuRef.value.openDialog();
 // };
 // 打开编辑菜单弹窗
-const onOpenSaveOrUpdate = (editType: string, row: RouteRecordRaw) => {
+const onOpenSaveOrUpdate = (editType: string, row?: any) => {
   EditRef.value.openDialog(editType, row);
 };
 // 删除当前行
-const deleted = (row: RouteRecordRaw) => {
+const deleted = (row: any) => {
   ElMessageBox.confirm('是否删除该条数据, 是否继续?', '提示', {
     confirmButtonText: '删除',
     cancelButtonText: '取消',

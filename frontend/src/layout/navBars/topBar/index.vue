@@ -28,7 +28,7 @@ const {themeConfig} = storeToRefs(storesThemeConfig);
 const {routesList} = storeToRefs(stores);
 const route = useRoute();
 const state = reactive({
-  menuList: [],
+  menuList: [] as any[],
 });
 
 // 设置 logo 显示/隐藏
@@ -72,7 +72,7 @@ const filterRoutesFun = <T extends RouteItem>(arr: T[]): T[] => {
 // 传送当前子级数据到菜单中
 const setSendClassicChildren = (path: string) => {
   const currentPathSplit = path.split('/');
-  let currentData = {children: []};
+  let currentData: any = {children: []};
   filterRoutesFun(routesList.value).map((v, k) => {
     if (v.path === `/${currentPathSplit[1]}`) {
       v['k'] = k;

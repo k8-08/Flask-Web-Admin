@@ -1,6 +1,6 @@
 import vue from '@vitejs/plugin-vue';
-import {resolve} from 'path';
-import {defineConfig, loadEnv, ConfigEnv} from 'vite';
+import { resolve } from 'path';
+import { defineConfig, loadEnv, ConfigEnv } from 'vite';
 import vueSetupExtend from 'vite-plugin-vue-setup-extend';
 import monacoEditorPlugin from "vite-plugin-monaco-editor"
 
@@ -34,44 +34,44 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
     optimizeDeps: {
       /** vite >= 2.3.0 */
       include: [
-				'vue',
-				'vue-router',
-				'@vueuse/core',
-				'pinia',
-				'axios',
-				'splitpanes',
-				'screenfull',
-				'echarts',
-				'monaco-editor',
-				'element-plus/es',
-				'element-plus/es/components/form/style/index',
-				'element-plus/es/components/radio-group/style/index',
-				'element-plus/es/components/radio/style/index',
-				'element-plus/es/components/checkbox/style/index',
-				'element-plus/es/components/checkbox-group/style/index',
-				'element-plus/es/components/switch/style/index',
-				'element-plus/es/components/time-picker/style/index',
-				'element-plus/es/components/date-picker/style/index',
-				'element-plus/es/components/col/style/index',
-				'element-plus/es/components/form-item/style/index',
-				'element-plus/es/components/alert/style/index',
-				'element-plus/es/components/breadcrumb/style/index',
-				'element-plus/es/components/select/style/index',
-				'element-plus/es/components/input/style/index',
-				'element-plus/es/components/breadcrumb-item/style/index',
-				'element-plus/es/components/tag/style/index',
-				'element-plus/es/components/pagination/style/index',
-				'element-plus/es/components/table/style/index',
-				'element-plus/es/components/table-column/style/index',
-				'element-plus/es/components/card/style/index',
-				'element-plus/es/components/row/style/index',
-				'element-plus/es/components/button/style/index',
-				'element-plus/es/components/menu/style/index',
-				'element-plus/es/components/sub-menu/style/index',
-				'element-plus/es/components/menu-item/style/index',
-				'element-plus/es/components/option/style/index',
-				'@element-plus/icons-vue',
-			],
+        'vue',
+        'vue-router',
+        '@vueuse/core',
+        'pinia',
+        'axios',
+        'splitpanes',
+        'screenfull',
+        'echarts',
+        'monaco-editor',
+        'element-plus/es',
+        'element-plus/es/components/form/style/index',
+        'element-plus/es/components/radio-group/style/index',
+        'element-plus/es/components/radio/style/index',
+        'element-plus/es/components/checkbox/style/index',
+        'element-plus/es/components/checkbox-group/style/index',
+        'element-plus/es/components/switch/style/index',
+        'element-plus/es/components/time-picker/style/index',
+        'element-plus/es/components/date-picker/style/index',
+        'element-plus/es/components/col/style/index',
+        'element-plus/es/components/form-item/style/index',
+        'element-plus/es/components/alert/style/index',
+        'element-plus/es/components/breadcrumb/style/index',
+        'element-plus/es/components/select/style/index',
+        'element-plus/es/components/input/style/index',
+        'element-plus/es/components/breadcrumb-item/style/index',
+        'element-plus/es/components/tag/style/index',
+        'element-plus/es/components/pagination/style/index',
+        'element-plus/es/components/table/style/index',
+        'element-plus/es/components/table-column/style/index',
+        'element-plus/es/components/card/style/index',
+        'element-plus/es/components/row/style/index',
+        'element-plus/es/components/button/style/index',
+        'element-plus/es/components/menu/style/index',
+        'element-plus/es/components/sub-menu/style/index',
+        'element-plus/es/components/menu-item/style/index',
+        'element-plus/es/components/option/style/index',
+        '@element-plus/icons-vue',
+      ],
       esbuildOptions: {
         plugins: [
           // esbuildPluginMonacoEditorNls({
@@ -85,12 +85,12 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
       },
     },
     root: process.cwd(),
-    resolve: {alias},
+    resolve: { alias },
     base: mode.command === 'serve' ? './' : env.VITE_PUBLIC_PATH,
     server: {
       host: '0.0.0.0',
       port: env.VITE_PORT as unknown as number,
-      open: JSON.parse(env.VITE_OPEN),
+      open: JSON.parse(env.VITE_OPEN || 'false'),
       hmr: true,
       proxy: {
         // '/gitee': {
@@ -118,7 +118,7 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
       },
     },
     css: {
-      preprocessorOptions: {css: {charset: false}},
+      preprocessorOptions: { css: { charset: false } },
       postcss: {
         plugins: [
           {

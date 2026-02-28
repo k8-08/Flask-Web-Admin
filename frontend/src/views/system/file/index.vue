@@ -286,7 +286,7 @@ const total = ref(0);
 // 编辑对话框
 const editDialogVisible = ref(false);
 const editForm = ref({
-  id: null,
+  id: 0,
   original_name: '',
   description: '',
   tags: '',
@@ -459,7 +459,7 @@ const downloadFile = async (row: any) => {
     const response = await useFileApi().download(row.id);
     
     // 创建blob对象
-    const blob = new Blob([response], { type: 'application/octet-stream' });
+    const blob = new Blob([response.data ? response.data : (response as any)], { type: 'application/octet-stream' });
     const url = window.URL.createObjectURL(blob);
     
     // 创建下载链接

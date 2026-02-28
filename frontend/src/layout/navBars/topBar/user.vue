@@ -167,7 +167,11 @@ const menuList = computed(() => {
   return useMenuState.getMenuList()
 })
 
-const state = reactive({
+const state = reactive<{
+  isScreenfull: boolean;
+  disabledSize: string;
+  [key: string]: any;
+}>({
   isScreenfull: false,
   disabledSize: 'large',
 });
@@ -426,6 +430,7 @@ onMounted(() => {
         line-height: 1.25rem;
         display: -webkit-box;
         -webkit-line-clamp: 1;
+        line-clamp: 1;
         white-space: nowrap; /* 确保文本在一行内显示 */
         overflow: hidden; /* 隐藏溢出容器的文本 */
         text-overflow: ellipsis; /* 超出部分显示为省略号 */

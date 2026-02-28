@@ -101,9 +101,9 @@ const setCurrentRouterHighlight = (currentRoute: RouteToFrom) => {
   if (themeConfig.value.layout === 'classic') {
     state.defaultActive = `/${path?.split('/')[1]}`;
   } else {
-    const pathSplit = meta?.isDynamic ? meta.isDynamicPath!.split('/') : path?.split('/');
-    if (pathSplit.length >= 4 && meta?.isHide) state.defaultActive = pathSplit.splice(0, 3).join('/');
-    else state.defaultActive = path;
+    const pathSplit = meta?.isDynamic ? meta.isDynamicPath?.split('/') : path?.split('/');
+    if (pathSplit && pathSplit.length >= 4 && meta?.isHide) state.defaultActive = pathSplit.splice(0, 3).join('/');
+    else state.defaultActive = path || '';
   }
 };
 // 打开外部链接

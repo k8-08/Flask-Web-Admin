@@ -110,7 +110,7 @@ const preview = () => {
   state.cropperImgBase64 = state.cropper.getCroppedCanvas().toDataURL('image/jpeg');
 }
 
-const beforeUpload = (file) => {
+const beforeUpload = (file: any) => {
   console.log("file", file)
   const reader = new FileReader()
   reader.readAsDataURL(file)

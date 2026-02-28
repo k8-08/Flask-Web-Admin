@@ -171,52 +171,6 @@ onMounted(() => {
         }
       }
 
-      .login-right-warp-one {
-        //&::before {
-        //  filter: hue-rotate(0deg);
-        //  top: 0px;
-        //  left: 0;
-        //  width: 100%;
-        //  height: 3px;
-        //  background: linear-gradient(90deg, transparent, var(--el-color-primary));
-        //  animation: loginLeft 3s linear infinite;
-        //}
-        //
-        //&::after {
-        //  filter: hue-rotate(60deg);
-        //  top: -100%;
-        //  right: 2px;
-        //  width: 3px;
-        //  height: 100%;
-        //  background: linear-gradient(180deg, transparent, var(--el-color-primary));
-        //  animation: loginTop 3s linear infinite;
-        //  animation-delay: 0.7s;
-        //}
-      }
-
-      .login-right-warp-two {
-        //&::before {
-        //  filter: hue-rotate(120deg);
-        //  bottom: 2px;
-        //  right: -100%;
-        //  width: 100%;
-        //  height: 3px;
-        //  background: linear-gradient(270deg, transparent, var(--el-color-primary));
-        //  animation: loginRight 3s linear infinite;
-        //  animation-delay: 1.4s;
-        //}
-        //
-        //&::after {
-        //  filter: hue-rotate(300deg);
-        //  bottom: -100%;
-        //  left: 0px;
-        //  width: 3px;
-        //  height: 100%;
-        //  background: linear-gradient(360deg, transparent, var(--el-color-primary));
-        //  animation: loginBottom 3s linear infinite;
-        //  animation-delay: 2.1s;
-        //}
-      }
 
       .login-right-warp-mian {
         display: flex;

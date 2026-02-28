@@ -17,6 +17,7 @@
  * @method setSql 数据查询工具，设置执行结果
  */
 declare type MittType<T = any> = {
+  openSettingsDrawer?: string;
   openSetingsDrawer?: string;
   restoreDefault?: string;
   setSendColumnsChildren: T;
@@ -27,7 +28,7 @@ declare type MittType<T = any> = {
   openShareTagsView?: string;
   onTagsViewRefreshRouterView?: T;
   onCurrentContextmenuClick?: T;
-// 	 dataSrouce
+  // 	 dataSrouce
   getColumnList?: T;
   setSourceInfo?: T;
   setSql?: T;

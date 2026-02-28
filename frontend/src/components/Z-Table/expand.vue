@@ -6,8 +6,8 @@ type IProp = {
   render: (row: Record<string, any>, index: number) => VNodeChild
   row: Record<string, any>
   index: number
-  lookupCode: string
-  columnKey: string
+  lookupCode?: string
+  columnKey?: string
 }
 export default defineComponent({
   props: {

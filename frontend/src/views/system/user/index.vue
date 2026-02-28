@@ -5,7 +5,7 @@
         <el-input v-model="state.listQuery.username" placeholder="请输入用户名称" style="max-width: 180px"></el-input>
         <el-button v-auth="'system:user:list'" type="primary" class="ml10" @click="search">查询
         </el-button>
-        <el-button v-auth="'system:user:add'" type="success" class="ml10" @click="onOpenSaveOrUpdate('save', null)">
+        <el-button v-auth="'system:user:add'" type="success" class="ml10" @click="onOpenSaveOrUpdate('save')">
           新增
         </el-button>
       </div>
@@ -57,12 +57,11 @@ interface listQueryRow {
 
 interface StateRow {
   columns: Array<any>;
-  fieldData: Array<any>;
   listData: Array<TableDataRow>;
   total: number;
   listQuery: listQueryRow;
   roleList: Array<any>;
-  roleQuery: listQueryRow;
+  roleQuery: any;
 }
 
 

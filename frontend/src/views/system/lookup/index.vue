@@ -229,7 +229,7 @@ const state = reactive({
   },
 
   //lookup value
-  lookupValueListData: [],
+  lookupValueListData: [] as any[],
   lookupValueTableLoading: false,
   isShowLookupValueDialog: false,
   lookupValueFieldData: [
@@ -275,7 +275,7 @@ const onOpenSaveOrUpdateLookup = (editType: string, row: any) => {
     state.lookupForm.code = row.code
     state.lookupForm.description = row.description
   } else {
-    state.lookupForm = {}
+    state.lookupForm = { id: null, code: '', description: '' }
   }
   state.isShowLookupDialog = !state.isShowLookupDialog
   nextTick(() => {
@@ -336,7 +336,7 @@ const editLookupValue = (row: any) => {
 };
 
 const addLookupValue = () => {
-  let lookupValue: object = {
+  let lookupValue: any = {
     id: null,
     lookup_id: state.lookupValueQuery.lookup_id,
     lookup_code: '',

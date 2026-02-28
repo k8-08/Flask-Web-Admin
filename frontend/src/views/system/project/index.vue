@@ -4,7 +4,7 @@
       <div class="system-project-search mb15">
         <el-input v-model="state.listQuery.name" placeholder="请输入项目名称" style="max-width: 180px"></el-input>
         <el-button v-auth="'project:query'" type="primary" class="ml10" @click="search">查询</el-button>
-        <el-button v-auth="'project:add'" type="success" class="ml10" @click="onOpenSaveOrUpdate('save', null)">新增</el-button>
+        <el-button v-auth="'project:add'" type="success" class="ml10" @click="onOpenSaveOrUpdate('save')">新增</el-button>
       </div>
       <z-table
           :columns="state.columns"

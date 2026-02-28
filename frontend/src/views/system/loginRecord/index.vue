@@ -323,7 +323,7 @@ const clearLogs = () => {
     inputErrorMessage: '请输入有效的天数',
     inputValue: '90'
   })
-    .then(({ value }) => {
+    .then(({ value }: any) => {
       const days = parseInt(value) || 90;
       useLogApi().clearLoginLogs(days)
         .then((res) => {

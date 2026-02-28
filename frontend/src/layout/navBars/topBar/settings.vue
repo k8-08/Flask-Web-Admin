@@ -508,7 +508,7 @@ const onColorPickerChange = () => {
 };
 // 2、菜单 / 顶栏
 const onBgColorPickerChange = (bg: string) => {
-  document.documentElement.style.setProperty(`--next-bg-${bg}`, themeConfig.value[bg]);
+  document.documentElement.style.setProperty(`--next-bg-${bg}`, (themeConfig.value as any)[bg]);
   if (bg === 'menuBar') {
     document.documentElement.style.setProperty(`--next-bg-menuBar-light-1`, getLightColor(getThemeConfig.value.menuBar, 0.05));
   }
@@ -530,7 +530,7 @@ const onColumnsMenuBarGradualChange = () => {
   setGraduaFun('.layout-container .layout-columns-aside', getThemeConfig.value.isColumnsMenuBarColorGradual, getThemeConfig.value.columnsMenuBar);
 };
 // 2、菜单 / 顶栏 --> 背景渐变函数
-const setGraduaFun = (el, bool, color) => {
+const setGraduaFun = (el: string, bool: boolean, color: string) => {
   nextTick(() => {
     setTimeout(() => {
       let els = document.querySelector(el);
@@ -584,7 +584,7 @@ const onShareTagsViewChange = () => {
   setLocalThemeConfig();
 };
 // 4、界面显示 --> 灰色模式/色弱模式
-const onAddFilterChange = (attr) => {
+const onAddFilterChange = (attr: string) => {
   if (attr === 'grayscale') {
     if (getThemeConfig.value.isGrayscale) getThemeConfig.value.isInvert = false;
   } else {
@@ -608,14 +608,14 @@ const onWartermarkChange = () => {
   setLocalThemeConfig();
 };
 // 4、界面显示 --> 水印文案
-const onWartermarkTextInput = (val) => {
+const onWartermarkTextInput = (val: string) => {
   getThemeConfig.value.wartermarkText = verifyAndSpace(val);
   if (getThemeConfig.value.wartermarkText === '') return false;
   if (getThemeConfig.value.isWartermark) Watermark.set(getThemeConfig.value.wartermarkText);
   setLocalThemeConfig();
 };
 // 5、布局切换
-const onSetLayout = (layout) => {
+const onSetLayout = (layout: string) => {
   Local.set('oldLayout', layout);
   if (getThemeConfig.value.layout === layout) return false;
   if (layout === 'transverse') getThemeConfig.value.isCollapse = false;

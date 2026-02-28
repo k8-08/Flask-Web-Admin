@@ -1,0 +1,190 @@
+src/api/v1/monitor/online.ts(51,17): error TS2304: Cannot find name 'IApiResponseData'.
+src/api/v1/monitor/online.ts(62,33): error TS2304: Cannot find name 'IApiResponseData'.
+src/api/v1/monitor/online.ts(72,65): error TS2304: Cannot find name 'IApiResponseData'.
+src/api/v1/monitor/online.ts(84,38): error TS2304: Cannot find name 'IApiResponseData'.
+src/api/v1/monitor/server.ts(90,32): error TS2304: Cannot find name 'IApiResponseData'.
+src/api/v1/monitor/server.ts(100,29): error TS2304: Cannot find name 'IApiResponseData'.
+src/api/v1/monitor/server.ts(110,32): error TS2304: Cannot find name 'IApiResponseData'.
+src/api/v1/monitor/server.ts(120,30): error TS2304: Cannot find name 'IApiResponseData'.
+src/api/v1/monitor/server.ts(130,33): error TS2304: Cannot find name 'IApiResponseData'.
+src/api/v1/monitor/server.ts(140,51): error TS2304: Cannot find name 'IApiResponseData'.
+src/components/seePictures/index.vue(113,23): error TS7006: Parameter 'file' implicitly has an 'any' type.
+src/components/Z-Table/index.vue(20,17): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(20,47): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(20,81): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(21,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(22,18): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(23,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(24,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(25,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(26,18): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(28,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(32,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(33,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(34,18): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(35,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(36,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(37,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(38,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(44,39): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(45,25): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(54,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(55,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(56,18): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(57,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(58,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(59,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(60,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(62,25): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(62,43): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(68,35): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(69,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(70,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(71,18): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(72,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(73,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(74,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(75,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(77,24): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(84,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(85,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(86,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(87,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(88,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(92,40): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(107,35): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(108,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(109,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(110,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(111,18): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(112,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(113,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(114,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(117,12): error TS2345: Argument of type '{ render: any; row: any; index: any; }' is not assignable to parameter of type 'Partial<{}> & Omit<{ readonly render: (row: Record<string, any>, index: number) => VNodeChild; readonly row: Record<string, any>; readonly index: number; readonly lookupCode: string; readonly columnKey: string; } & ... 4 more ... & Readonly<...>, never> & Record<...>'.
+  Type '{ render: any; row: any; index: any; }' is missing the following properties from type 'Omit<{ readonly render: (row: Record<string, any>, index: number) => VNodeChild; readonly row: Record<string, any>; readonly index: number; readonly lookupCode: string; readonly columnKey: string; } & ... 4 more ... & Readonly<...>, never>': lookupCode, columnKey
+src/components/Z-Table/index.vue(117,28): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(126,35): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(128,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(129,22): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(130,18): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(131,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(132,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(133,19): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(135,29): error TS18046: 'col' is of type 'unknown'.
+src/components/Z-Table/index.vue(135,38): error TS18046: 'col' is of type 'unknown'.
+src/components/ZeroCard/index.vue(28,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<__VLS_Slots> & __VLS_Slots'.
+  No index signature with a parameter of type 'string' was found on type 'Readonly<__VLS_Slots> & __VLS_Slots'.
+src/layout/component/aside.vue(50,7): error TS18047: 'asideEle' is possibly 'null'.
+src/layout/component/aside.vue(89,3): error TS2322: Type 'any[]' is not assignable to type 'never[]'.
+  Type 'any' is not assignable to type 'never'.
+src/layout/component/aside.vue(102,24): error TS7006: Parameter 'clientWidth' implicitly has an 'any' type.
+src/layout/component/aside.vue(106,28): error TS7006: Parameter 'bool' implicitly has an 'any' type.
+src/layout/index.vue(2,19): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ defaults: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, ToResolvedProps<...>, ... 8 more ..., any>; classic: DefineComponent<...>; transverse: DefineComponent<...>; columns: DefineComponent<...>; }'.
+  No index signature with a parameter of type 'string' was found on type '{ defaults: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, ToResolvedProps<...>, ... 8 more ..., any>; classic: DefineComponent<...>; transverse: DefineComponent<...>; columns: DefineComponent<...>; }'.
+src/layout/navBars/tagsView/tagsView.vue(66,22): error TS7016: Could not find a declaration file for module 'sortablejs'. 'D:/Flaskapiwebadmin/frontend/node_modules/sortablejs/Sortable.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/sortablejs` if it exists or add a new declaration (.d.ts) file containing `declare module 'sortablejs';`
+src/layout/navBars/tagsView/tagsView.vue(183,29): error TS2339: Property 'fullPath' does not exist on type 'RouteToFrom<any>'.
+src/layout/navBars/tagsView/tagsView.vue(188,80): error TS2339: Property 'fullPath' does not exist on type 'RouteToFrom<any>'.
+src/layout/navBars/tagsView/tagsView.vue(203,24): error TS2339: Property 'fullPath' does not exist on type 'RouteToFrom<any>'.
+src/layout/navBars/tagsView/tagsView.vue(237,10): error TS2339: Property 'fullPath' does not exist on type 'RouteItem<any>'.
+src/layout/navBars/tagsView/tagsView.vue(237,25): error TS2339: Property 'fullPath' does not exist on type 'RouteToFrom<any>'.
+src/layout/navBars/tagsView/tagsView.vue(269,46): error TS2339: Property 'fullPath' does not exist on type 'RouteItem<any>'.
+src/layout/navBars/tagsView/tagsView.vue(413,5): error TS2339: Property 'fullPath' does not exist on type 'RouteItem<any>'.
+src/layout/navBars/topBar/index.vue(48,5): error TS2322: Type 'any[]' is not assignable to type 'never[]'.
+  Type 'any' is not assignable to type 'never'.
+src/layout/navBars/topBar/index.vue(52,5): error TS2322: Type 'any[]' is not assignable to type 'never[]'.
+  Type 'any' is not assignable to type 'never'.
+src/layout/navBars/topBar/index.vue(79,7): error TS7053: Element implicitly has an 'any' type because expression of type '"item"' can't be used to index type '{ children: never[]; }'.
+  Property 'item' does not exist on type '{ children: never[]; }'.
+src/layout/navBars/topBar/index.vue(80,34): error TS2322: Type 'any' is not assignable to type 'never'.
+src/layout/navBars/topBar/search.vue(71,11): error TS7006: Parameter 'restaurant' implicitly has an 'any' type.
+src/layout/navBars/topBar/settings.vue(511,65): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ isDrawer: boolean; primary: string; topBar: string; topBarColor: string; isTopBarColorGradual: boolean; menuBar: string; menuBarColor: string; menuBarActiveColor: string; isMenuBarColorGradual: boolean; ... 36 more ...; globalComponentSize: string; }'.
+  No index signature with a parameter of type 'string' was found on type '{ isDrawer: boolean; primary: string; topBar: string; topBarColor: string; isTopBarColorGradual: boolean; menuBar: string; menuBarColor: string; menuBarActiveColor: string; isMenuBarColorGradual: boolean; ... 36 more ...; globalComponentSize: string; }'.
+src/layout/navBars/topBar/settings.vue(533,23): error TS7006: Parameter 'el' implicitly has an 'any' type.
+src/layout/navBars/topBar/settings.vue(533,27): error TS7006: Parameter 'bool' implicitly has an 'any' type.
+src/layout/navBars/topBar/settings.vue(533,33): error TS7006: Parameter 'color' implicitly has an 'any' type.
+src/layout/navBars/topBar/settings.vue(587,28): error TS7006: Parameter 'attr' implicitly has an 'any' type.
+src/layout/navBars/topBar/settings.vue(611,32): error TS7006: Parameter 'val' implicitly has an 'any' type.
+src/layout/navBars/topBar/settings.vue(618,22): error TS7006: Parameter 'layout' implicitly has an 'any' type.
+src/layout/navMenu/horizontal.vue(105,9): error TS18048: 'pathSplit' is possibly 'undefined'.
+src/layout/navMenu/horizontal.vue(105,70): error TS18048: 'pathSplit' is possibly 'undefined'.
+src/layout/navMenu/horizontal.vue(106,10): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/layout/navMenu/subItem.vue(5,25): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/subItem.vue(6,18): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/subItem.vue(12,26): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/subItem.vue(12,46): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/subItem.vue(12,65): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/subItem.vue(13,27): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/subItem.vue(14,20): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/subItem.vue(17,56): error TS2345: Argument of type 'RouteRecordRaw' is not assignable to parameter of type 'RouteItem<any>'.
+  Type 'RouteRecordSingleView' is not assignable to type 'RouteItem<any>'.
+    Types of property 'children' are incompatible.
+      Type 'undefined' is not assignable to type 'any[]'.
+src/layout/navMenu/subItem.vue(18,29): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/subItem.vue(19,16): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(13,27): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(14,20): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(20,27): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(21,35): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(21,55): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(21,74): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(22,22): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(25,58): error TS2345: Argument of type 'RouteRecordRaw' is not assignable to parameter of type 'RouteItem<any>'.
+  Type 'RouteRecordSingleView' is not assignable to type 'RouteItem<any>'.
+    Types of property 'children' are incompatible.
+      Type 'undefined' is not assignable to type 'any[]'.
+src/layout/navMenu/vertical.vue(25,67): error TS18048: 'val.meta' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(73,7): error TS18048: 'pathSplit' is possibly 'undefined'.
+src/layout/navMenu/vertical.vue(73,53): error TS18048: 'pathSplit' is possibly 'undefined'.
+src/stores/routesList.ts(27,7): error TS2322: Type 'Boolean' is not assignable to type 'boolean'.
+  'boolean' is a primitive, but 'Boolean' is a wrapper object. Prefer using 'boolean' when possible.
+src/utils/arrayOperation.ts(33,15): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+src/utils/arrayOperation.ts(34,15): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+src/utils/arrayOperation.ts(58,14): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+src/utils/arrayOperation.ts(58,38): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+src/utils/arrayOperation.ts(58,60): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+src/views/login/component/account.vue(177,9): error TS2322: Type 'string | LocationQueryValue[]' is not assignable to type 'string'.
+  Type 'LocationQueryValue[]' is not assignable to type 'string'.
+src/views/login/component/account.vue(178,60): error TS2345: Argument of type '{}' is not assignable to parameter of type 'string'.
+src/views/system/file/index.vue(462,28): error TS2322: Type 'AxiosResponse<any, any>' is not assignable to type 'BlobPart'.
+  Type 'AxiosResponse<any, any>' is missing the following properties from type 'Blob': size, arrayBuffer, bytes, slice, and 3 more.
+src/views/system/file/index.vue(500,31): error TS2345: Argument of type 'null' is not assignable to parameter of type 'number'.
+src/views/system/loginRecord/index.vue(326,14): error TS2339: Property 'value' does not exist on type 'MessageBoxData'.
+src/views/system/lookup/index.vue(278,5): error TS2739: Type '{}' is missing the following properties from type '{ id: null; code: string; description: string; }': id, code, description
+src/views/system/lookup/index.vue(348,34): error TS2345: Argument of type 'object' is not assignable to parameter of type 'never'.
+src/views/system/menu/EditMenu.vue(16,27): error TS18046: 'item' is of type 'unknown'.
+src/views/system/menu/EditMenu.vue(17,29): error TS18046: 'item' is of type 'unknown'.
+src/views/system/menu/EditMenu.vue(18,29): error TS18046: 'item' is of type 'unknown'.
+src/views/system/menu/EditMenu.vue(274,9): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+src/views/system/menu/EditMenu.vue(297,33): error TS2322: Type 'null' is not assignable to type 'string'.
+src/views/system/menu/EditMenu.vue(298,32): error TS2322: Type 'null' is not assignable to type 'string'.
+src/views/system/menu/EditMenu.vue(299,32): error TS2322: Type 'null' is not assignable to type 'string'.
+src/views/system/menu/EditMenu.vue(300,31): error TS2322: Type 'null' is not assignable to type 'string'.
+src/views/system/operationLog/index.vue(70,20): error TS2322: Type 'string' is not assignable to type '"primary" | "success" | "info" | "warning" | "danger" | undefined'.
+src/views/system/operationLog/index.vue(169,11): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string' is not assignable to type '"primary" | "success" | "info" | "warning" | "danger"'.
+src/views/system/operationLog/index.vue(379,14): error TS2339: Property 'value' does not exist on type 'MessageBoxData'.
+src/views/system/personal/ResetPassword.vue(7,62): error TS2339: Property 'rules' does not exist on type '{ form: EmptyObjectType<any>; isShowDialog: boolean; }'.
+src/views/system/project/index.vue(7,106): error TS2345: Argument of type 'null' is not assignable to parameter of type 'TableDataRow | undefined'.
+src/views/system/role/EditRole.vue(333,37): error TS2339: Property 'menus' does not exist on type 'RoleData'.
+src/views/system/role/EditRole.vue(334,33): error TS2339: Property 'menus' does not exist on type 'RoleData'.
+src/views/system/role/EditRole.vue(336,37): error TS2339: Property 'depts' does not exist on type 'RoleData'.
+src/views/system/role/EditRole.vue(337,33): error TS2339: Property 'depts' does not exist on type 'RoleData'.
+src/views/system/role/EditRole.vue(358,35): error TS2322: Type 'null' is not assignable to type 'string'.
+src/views/system/user/EditUser.vue(40,27): error TS18046: 'item' is of type 'unknown'.
+src/views/system/user/EditUser.vue(41,29): error TS18046: 'item' is of type 'unknown'.
+src/views/system/user/EditUser.vue(41,42): error TS18046: 'item' is of type 'unknown'.
+src/views/system/user/EditUser.vue(42,29): error TS18046: 'item' is of type 'unknown'.
+src/views/system/user/EditUser.vue(191,34): error TS2322: Type 'null' is not assignable to type 'string'.
+src/views/system/user/EditUser.vue(192,20): error TS2339: Property 'phone' does not exist on type '{ id: null; username: string; nickname: string; password: string; role_ids: never[]; email: string; status: number; user_type: number; remark: string; updated_by: null; dept_id: null; }'.
+src/views/system/user/EditUser.vue(192,43): error TS2339: Property 'phone' does not exist on type '{ id: null; username: string; nickname: string; password: string; role_ids: never[]; email: string; status: number; user_type: number; remark: string; updated_by: null; dept_id: null; }'.
+src/views/system/user/EditUser.vue(193,35): error TS2322: Type 'null' is not assignable to type 'string'.
+src/views/system/user/EditUser.vue(194,20): error TS2339: Property 'post' does not exist on type '{ id: null; username: string; nickname: string; password: string; role_ids: never[]; email: string; status: number; user_type: number; remark: string; updated_by: null; dept_id: null; }'.
+src/views/system/user/EditUser.vue(194,42): error TS2339: Property 'post' does not exist on type '{ id: null; username: string; nickname: string; password: string; role_ids: never[]; email: string; status: number; user_type: number; remark: string; updated_by: null; dept_id: null; }'.
+src/views/system/user/EditUser.vue(198,16): error TS2790: The operand of a 'delete' operator must be optional.
+src/views/system/user/index.vue(8,110): error TS2345: Argument of type 'null' is not assignable to parameter of type 'TableDataRow | undefined'.
+src/views/system/user/index.vue(154,3): error TS2741: Property 'username' is missing in type '{ page: number; pageSize: number; }' but required in type 'listQueryRow'.

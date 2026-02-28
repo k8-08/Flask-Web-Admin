@@ -1,0 +1,4 @@
+﻿
+> fastapiwebadmin-element-admin@2.0.1 build
+> vite build
+

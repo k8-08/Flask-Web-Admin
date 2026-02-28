@@ -209,7 +209,7 @@ interface RoleData {
   role_sort: number;
   data_scope: number;
   status: number;
-  remark: string;
+  remark: string | null;
   menu_ids: Array<number>;
   dept_ids: Array<number>;
 }
@@ -330,11 +330,11 @@ const openDialog = (editType: string, row: RoleData) => {
   if (row) {
     state.form = JSON.parse(JSON.stringify(row));
     // 确保使用新字段名
-    if (!state.form.menu_ids && row.menus) {
-      state.form.menu_ids = row.menus;
+    if (!state.form.menu_ids && (row as any).menus) {
+      state.form.menu_ids = (row as any).menus;
     }
-    if (!state.form.dept_ids && row.depts) {
-      state.form.dept_ids = row.depts;
+    if (!state.form.dept_ids && (row as any).depts) {
+      state.form.dept_ids = (row as any).depts;
     }
   } else {
     state.form = createForm()

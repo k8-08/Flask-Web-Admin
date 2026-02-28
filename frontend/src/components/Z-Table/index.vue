@@ -152,7 +152,7 @@
   </div>
 </template>
 <script setup lang="ts" name="z-table">
-import {computed, defineAsyncComponent, reactive} from 'vue'
+import {computed, defineAsyncComponent, reactive, PropType} from 'vue'
 import {formatLookup} from '/@/utils/lookup'
 
 const Expand = defineAsyncComponent(() => import("./expand.vue"))
@@ -165,7 +165,7 @@ const props = defineProps({
   },
   // table的数据
   columns: {
-    type: Array,
+    type: Array as PropType<any[]>,
     default: () => []
   },
   // 每列的配置项
